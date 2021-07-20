@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List of the trips</title>
+</head>
+<body>
+    <p>
+        <% db.forEach((trip)=> { %>
+            <h2>
+                <%= trip.title %>
+            </h2>
+            <a href="/trip-details/<%= trip.id%>">View Details</a>
+            <% }); %>
+    </p>
+    <a href="/new">Add New Trips</a>
+</body>
+</html>
